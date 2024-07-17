@@ -1,6 +1,65 @@
-# PortfolioAfV2
+# Portfólio_V2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+
+## Atomic Design Implementation in Angular
+
+### Project Structure
+
+You can organize your Angular project according to these categories. A directory structure might look like this:
+
+    src/
+      app/
+        atoms/
+          button/
+            button.component.ts
+            button.component.html
+            button.component.css
+        molecules/
+          form-field/
+            form-field.component.ts
+            form-field.component.html
+            form-field.component.css
+        organisms/
+          header/
+            header.component.ts
+            header.component.html
+            header.component.css
+        templates/
+          main-layout/
+            main-layout.component.ts
+            main-layout.component.html
+            main-layout.component.css
+        pages/
+          home-page/
+            home-page.component.ts
+            home-page.component.html
+            home-page.component.css
+
+### `atoms/`
+
+- **Description**: Contains the smallest, fundamental components, often representing basic HTML elements.
+- **Examples**: Components like buttons, inputs, icons, etc.
+
+### `molecules/`
+
+- **Description**: Groups of atoms working together to form more complex components.
+- **Examples**: Components that combine atoms into larger functional units (e.g., form-field).
+
+### `organisms/`
+
+- **Description**: Larger, more complex components that may include molecules, atoms, and other organisms.
+- **Examples**: Components representing distinct sections of the UI like headers, footers, etc.
+
+### `templates/`
+
+- **Description**: Combines organisms to create entire page layouts.
+- **Examples**: Components defining the overall structure of pages, including headers, footers, and main content areas.
+
+### `pages/`
+
+- **Description**: Specific instances of templates populated with real content.
+- **Examples**: Components representing actual pages users interact with.
 
 ## Development server
 

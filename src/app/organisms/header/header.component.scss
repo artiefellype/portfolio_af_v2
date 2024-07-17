@@ -1,0 +1,59 @@
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  font-size: 14px;
+  top: 0;
+  left: 0;
+}
+
+
+
+.custom-shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 45px;
+  color: white;
+  background-color: #1e1e1e;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    width: 1024px;
+    clip-path: path(
+      "M196.734 22.5C196.734 10.0736 187.183 0 175.401 0H0H1024H851.55C839.768 0 830.217 10.0736 830.217 22.5V22.5C830.217 34.9264 820.666 45 808.884 45H218.067C206.285 45 196.734 34.9264 196.734 22.5V22.5Z"
+    );
+    transform: translateX(calc(50% - 510px));
+    img {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    justify-content: start;
+    clip-path: path(
+      "M22.5 45C10.0736 45 0 34.9264 0 22.5V22.5C0 10.0736 10.0736 0 22.5 0H120V0C110.185 0 100.882 4.38495 94.6361 11.9563L91.207 16.1127C89.0818 18.6887 87.3686 21.5784 86.1284 24.679V24.679C81.2191 36.9522 69.3323 45 56.1137 45H25.5548H22.5Z"
+    );
+  }
+}
+
+.custom-shape img {
+  margin-left: 1.5rem;
+  padding: 0.3rem;
+}
+
+@keyframes showItem {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
