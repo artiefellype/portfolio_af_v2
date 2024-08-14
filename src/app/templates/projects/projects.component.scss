@@ -1,0 +1,32 @@
+section {
+  height: auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.container {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1140px;
+  color: #f5f5f5;
+  margin-bottom: 3rem;
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: center;
+}
+
+.projects-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+

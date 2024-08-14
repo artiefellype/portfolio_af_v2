@@ -2,13 +2,13 @@ $breakpoint-lg: 1024px;
 $breakpoint-md: 768px;
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .about-container {
+  margin-top: 3rem;
   width: 1140px;
-  height: 390px;
   display: flex;
   position: relative;
   justify-content: center;
@@ -49,8 +49,6 @@ section {
       margin: 1.5rem auto;
     }
   }
-
-
 
   .description-one {
     width: 100%;

@@ -1,0 +1,17 @@
+<section id="projects">
+  <div class="container">
+    <app-main-title [secondTitle]="'PROJETOS'" />
+  </div>
+  <div class="projects-container">
+    <app-project-card
+      *ngFor="let project of projects"
+      (click)="openProject(project.link)"
+      [projectTitle]="project.title"
+      [projectDescription]="project.description"
+      [projectBackgroundImg]="project.imageUrl"
+      [iconsSvgContent]="project.icons"
+      [projectLink]="project.link"
+    >
+    </app-project-card>
+  </div>
+</section>

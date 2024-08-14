@@ -1,0 +1,97 @@
+
+  <div class="card-interact-container" (click)="onCardClick()" >
+    <div class="card-project-image-area">
+      <svg
+        width="375"
+        height="226"
+        viewBox="0 0 375 226"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="imgPattern3"
+            patternUnits="userSpaceOnUse"
+            width="375"
+            height="226"
+          >
+            <image
+              [attr.href]="projectBackgroundImg"
+              x=""
+              y="0"
+              width="375"
+              height="226"
+            />
+          </pattern>
+
+          <mask id="mask2" mask-type="alpha">
+            <path
+              fill="white"
+              clip-rule="evenodd"
+              d="M337 1H40C18.4609 1 1 18.4609 1 40V186C1 207.539 18.4609 225 40 225H339.75C358.666 225 374 209.666 374 190.75V189.055C374 171.076 359.424 156.5 341.445 156.5C322.36 156.5 306.889 141.029 306.889 121.945V109.555C306.889 90.4709 322.36 75 341.445 75C359.424 75 374 60.4245 374 42.4447V38C374 17.5655 357.435 1 337 1ZM40 0C17.9086 0 0 17.9086 0 40V186C0 208.091 17.9086 226 40 226H339.75C359.218 226 375 210.218 375 190.75V189.055C375 170.523 359.977 155.5 341.445 155.5C322.913 155.5 307.889 140.477 307.889 121.945V109.555C307.889 91.0232 322.913 76 341.445 76C359.977 76 375 60.9768 375 42.4447V38C375 17.0132 357.987 0 337 0H40Z"
+            />
+          </mask>
+        </defs>
+
+        <rect
+          width="375"
+          height="226"
+          fill="url(#imgPattern3)"
+          mask="url(#mask2)"
+        />
+      </svg>
+      <div class="card-button">
+        <i class="fas fa-external-link-alt fa-lg icon"></i>
+      </div>
+    </div>
+    <div class="card-image-area">
+      <svg
+        width="384"
+        height="226"
+        viewBox="0 0 384 226"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern
+            id="imgPattern2"
+            patternUnits="userSpaceOnUse"
+            width="384"
+            height="226"
+          >
+            <image
+              href="/assets/bg-cards.png"
+              x="0"
+              y="0"
+              width="384"
+              height="226"
+            />
+          </pattern>
+
+          <mask id="mask1" mask-type="alpha">
+            <path
+              fill="white"
+              clip-rule="evenodd"
+              d="M381.813 1H40C18.4609 1 1 18.4609 1 40V186C1 207.539 18.4609 225 40 225H188.043L381.813 1ZM40 0C17.9086 0 0 17.9086 0 40V186C0 208.091 17.9086 226 40 226H188.5L384 0H40Z"
+            />
+          </mask>
+        </defs>
+
+        <rect
+          width="384"
+          height="226"
+          fill="url(#imgPattern2)"
+          mask="url(#mask1)"
+        />
+      </svg>
+      <div class="card-text-area">
+        <h2>{{ projectTitle }}</h2>
+        <p>
+          {{ projectDescription }}
+        </p>
+        <ul class="icon-list">
+          <li *ngFor="let icon of safeIcons" [innerHTML]="icon" class="icon"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
