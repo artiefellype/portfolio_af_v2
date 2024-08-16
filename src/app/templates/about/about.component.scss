@@ -8,7 +8,9 @@ section {
 
 .about-container {
   margin-top: 3rem;
-  width: 1140px;
+  width: 100%;
+  max-width: 1240px;
+
   display: flex;
   position: relative;
   justify-content: center;
@@ -39,6 +41,7 @@ section {
     transition: opacity 1s ease-in-out;
     animation: fadeIn 1.5s ease-in-out 1.5s forwards;
 
+
     @media (max-width: $breakpoint-md) {
       position: relative;
       width: 100%;
@@ -53,12 +56,18 @@ section {
   .description-one {
     width: 100%;
     padding: 1.5rem;
+    p{
+      font-size: 16px ;
+    }
   }
 
   .description-two {
     width: 100%;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    p{
+      font-size: 16px ;
+    }
   }
 
   .description-one-space {
