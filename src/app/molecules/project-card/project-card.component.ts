@@ -16,11 +16,17 @@ export class ProjectCardComponent implements OnInit{
   @Input() projectBackgroundImg: string = '';
   @Input() projectLink: string = '';
 
+  uniquePatternId: string = '';
+  uniqueMaskId: string = '';
+
   safeIcons: SafeHtml[] = [];
 
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
+    this.uniquePatternId = `imgPattern-${Math.random().toString(36).substr(2, 9)}`;
+    this.uniqueMaskId = `mask-${Math.random().toString(36).substr(2, 9)}`;
+
     this.safeIcons = this.iconsSvgContent.map(icon => this.sanitizer.bypassSecurityTrustHtml(icon));
   }
 
